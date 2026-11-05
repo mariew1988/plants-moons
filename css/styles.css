@@ -1,0 +1,104 @@
+/* basic formatting - nothing to change here at any breakpoint */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+:root {
+  --justify: center;
+  --display: flex;
+  --text-decoration: none;
+}
+
+body {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 1rem;
+  /*     line-height: 1.5; */
+}
+
+header {
+  text-align: center;
+  display: var(--display);
+  flex-flow: row wrap;
+  background-color: #ffffff;
+  color: #1271d2;
+  justify-content: var(--justify);
+}
+
+li a {
+  color: #800080;
+  text-decoration: var(--text);
+  text-align: bottom;
+}
+
+ul {
+  list-style-type: none;
+  display: var(--display);
+  flex-flow: row wrap;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: var(--justify);
+  padding-bottom: 1rem;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+main {
+  display: var(--display);
+  flex-flow: row wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0 0.5rem;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+.button {
+  background-color: #2d697c;
+  padding: 0.5rem;
+  border-radius: 5px;
+  color: white;
+  text-decoration: var(--text);
+  font-size: 0.8rem;
+}
+
+.button:hover {
+  background-color: #327c94;
+}
+
+@media (min-width: 550px) {
+  .card {
+    flex: 0 0 48%;
+  }
+
+  header {
+    justify-content: var(--justify);
+  }
+}
+
+@media (min-width: 850px) {
+  .card {
+    flex: 0 0 35%;
+    flex-basis: calc((100% - 2rem) / 3);
+  }
+
+  header {
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
